@@ -1,0 +1,85 @@
+/* ─── Google Fonts imported in HTML ─────────────── */
+/* ─── CSS Variables: Light & Dark Themes ────────── */
+
+:root {
+  --accent:        #6366f1;
+  --accent-light:  rgba(99, 102, 241, 0.12);
+  --accent-glow:   rgba(99, 102, 241, 0.15);
+  --accent-shadow: rgba(99, 102, 241, 0.35);
+  --accent2-glow:  rgba(139, 92, 246, 0.1);
+}
+
+/* Dark Theme (default) */
+[data-theme="dark"] {
+  --bg-primary:    #0f1117;
+  --bg-secondary:  #1a1d27;
+  --sidebar-bg:    #13151f;
+  --card-bg:       rgba(255,255,255,0.04);
+  --input-bg:      rgba(255,255,255,0.06);
+  --border:        rgba(255,255,255,0.09);
+  --hover:         rgba(255,255,255,0.06);
+  --shadow:        rgba(0,0,0,0.4);
+  --grid-line:     rgba(255,255,255,0.04);
+  --text-primary:  #f0f0f5;
+  --text-secondary:#a0a3b1;
+  --text-muted:    #5a5d70;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary:    #f5f6fa;
+  --bg-secondary:  #eceef5;
+  --sidebar-bg:    #ffffff;
+  --card-bg:       #ffffff;
+  --input-bg:      #f0f1f8;
+  --border:        rgba(0,0,0,0.08);
+  --hover:         rgba(0,0,0,0.04);
+  --shadow:        rgba(0,0,0,0.1);
+  --grid-line:     rgba(0,0,0,0.04);
+  --text-primary:  #1a1d2e;
+  --text-secondary:#4a4d60;
+  --text-muted:    #9a9db0;
+  --accent-glow:   rgba(99, 102, 241, 0.08);
+  --accent2-glow:  rgba(139, 92, 246, 0.05);
+}
+
+/* ─── Reset & Base ───────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ─── Theme Button ───────────────────────────────── */
+.theme-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: var(--text-primary);
+}
+
+.theme-btn:hover { border-color: var(--accent); transform: scale(1.05); }
+
+/* ─── Utility ────────────────────────────────────── */
+.hidden { display: none !important; }
